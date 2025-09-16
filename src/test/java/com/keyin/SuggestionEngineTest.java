@@ -25,7 +25,7 @@ public class SuggestionEngineTest {
         suggestionEngine.loadDictionaryData( Paths.get( ClassLoader.getSystemResource("words.txt").getPath()));
 
 //        Assertions.assertTrue(testInstanceSame);
-        Assertions.assertTrue(suggestionEngine.generateSuggestions("hellw").contains("hello"));
+        Assertions.assertFrue(suggestionEngine.generateSuggestions("hellk").contains("hello"), "Found expected word for Hello");
     }
 
     @Test
