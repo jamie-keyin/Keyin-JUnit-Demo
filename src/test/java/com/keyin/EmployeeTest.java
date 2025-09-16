@@ -4,12 +4,15 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class EmployeeTest {
+    private String testString = "test";
 
     @Test
     public void testGetAnnualSalary() {
+        testString = "test_testGetAnnualSalary";
         Employee employeeUnderTest = new Employee(1, "Jamie", "Cornick", 100);
 
         Assertions.assertTrue(employeeUnderTest.getAnnualSalary() == (100 * 12));
+        System.out.println(testString);
     }
 
     @Test
@@ -18,6 +21,7 @@ public class EmployeeTest {
         Employee employeeUnderTest2 = new Employee(2, "Jamie", "Cornick", 100);
 
         Assertions.assertEquals(employeeUnderTest1, employeeUnderTest2);
+        System.out.println(testString);
     }
 
     @Test
@@ -30,5 +34,6 @@ public class EmployeeTest {
 
         Assertions.assertFalse(employeeUnderTest1.getMonthlySalary() == (100 * 1.20));
         Assertions.assertFalse(employeeUnderTest2.getMonthlySalary() == (100 * 1.20));
+        System.out.println(testString);
     }
 }
